@@ -11,6 +11,6 @@ export interface Beer {
 
 
 export interface Shop {
-  priceALiter: number;
+  priceALiter: number; // price of the beer for a liter
   siteUrl: string; // contain the url of the website corresponding to the price
 }
