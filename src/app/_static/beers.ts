@@ -8,7 +8,7 @@ export const BEERS = [
   },
   {
     id: '5763cd4d51fdb6588742f99e',
-    name: 'Guinness',
+    name: 'Guinness Classic',
     country: 'Ireland',
     cereal: 'hop',
     birth: '1759'
