@@ -1,59 +1,42 @@
-
-@media (min-width: 768px) {
-  :host(.wide) mat-card,
-  :host(.wide) mat-list-item{
-    width: 600px;
-  }
+section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-
-mat-card-title {
-  margin-bottom: 0;
-}
-
-mat-card-title span {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: bolder;
-  color : aquamarine;
-}
-
-mat-card-header {
-  background-color: gray;
-  height: 50px;
-  opacity: 50%;
-}
-
-mat-card,
 mat-list-item {
+  border: 1px solid rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.87);
   background-color: white;
-  margin: 10px;
-  width: 360px;
+  font-size: 14px;
+  display: block;
+  margin: 3px 0 3px -12px;
+  padding: 0;
+  height: 70px;
+  width: 400px;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
 }
 
-mat-card:hover {
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),
-  0 24px 38px 3px rgba(0,0,0,.14),
+mat-list-item:hover {
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14),
   0 9px 46px 8px rgba(0,0,0,.12);
 }
 
-mat-list-item {
-  height: 22px;
-  padding: 0;
-  margin-left: -12px;
-  font-size: 14px;
+.buttons-fab {
+  display: block;
+  height: 170px;
+  width: 90px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
-mat-card-title.beer-info {
-  margin-top: -7px;
-  height: 20px;
+.buttons-fab button {
+  transition: bottom 0.2s;
 }
 
-.mat-whiteframe-2dp {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),
-  0 2px 2px 0 rgba(0,0,0,.14),
-  0 3px 1px -2px rgba(0,0,0,.12);
+.buttons-fab:hover .button-add {
+  bottom: 90px;
 }
-
-

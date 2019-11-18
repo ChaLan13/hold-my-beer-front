@@ -4,7 +4,7 @@ export interface Beer {
   id?: string;
   name: string;
   country?: string;
-  cereal?: Array<string>; // min 1, max 10
+  cereal?: string; // min 1, max 10
   birth: number;
 
 }

@@ -6,10 +6,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeerComponent } from './beer/beer.component';
-import {MatListModule} from "@angular/material/list";
-import {MatButtonModule} from "@angular/material/button";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CardComponent } from './shared/card/card.component';
+import {DialogComponent} from './shared/dialog/dialog.component';
+import {UpdateComponent} from '../update/update.component';
+import {FormComponent} from '../form/form.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 
 
 
@@ -17,7 +24,10 @@ import { CardComponent } from './shared/card/card.component';
   declarations: [
     AppComponent,
     BeerComponent,
-    CardComponent
+    CardComponent,
+    DialogComponent,
+    UpdateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,11 @@ import { CardComponent } from './shared/card/card.component';
     MatCardModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    HttpClientModule
 
   ],
   providers: [],

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Beer} from '../interfaces/beer';
 
 @Component({
   selector: 'app-card',
