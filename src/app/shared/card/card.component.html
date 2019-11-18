@@ -1,0 +1,32 @@
+<section>
+  <mat-card class="mat-whiteframe-2dp">
+    <mat-card-header>
+      <mat-card-title>
+        <span>{{beer.name}}</span>
+      </mat-card-title>
+
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-card-subtitle class="beer-info">
+        Country&nbsp;:&nbsp;
+        <a href="javascript:void(0);">{{ beer.country }}</a>
+      </mat-card-subtitle>
+
+      <mat-card-subtitle class="beer-info">
+        Cereal : <span>{{beer.cereal}}</span>
+      </mat-card-subtitle>
+      <mat-card-actions class="buttons-info">
+
+        <button mat-button title="Edit">
+          <mat-icon svgIcon="icon-edit">Edit</mat-icon>
+        </button>
+        <button mat-button title="Delete" (click)="delete(beer)">
+          <mat-icon svgIcon="icon-delete">Delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+

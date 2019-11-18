@@ -1,2 +1,8 @@
-<body><p>{{beer.name}}</p></body>
+<section>
+  <app-card [beer]="beer"></app-card>
 
+</section>
+
+<button mat-button>
+  <i class="material-icons" (click)="random()">Autorenew</i>
+</button>
