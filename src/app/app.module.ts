@@ -17,6 +17,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
+import {DrinksComponent} from './drinks/drinks.component';
 
 
 
@@ -27,7 +28,8 @@ import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
     CardComponent,
     DialogComponent,
     UpdateComponent,
-    FormComponent
+    FormComponent,
+    DrinksComponent
   ],
   imports: [
     BrowserModule,

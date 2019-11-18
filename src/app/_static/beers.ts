@@ -1,4 +1,4 @@
-export const BEERS = [
+/*export const BEERS = [
   {
     id: '5763cd4d9d2a4f259b53c901',
     name: 'Pilsner',
@@ -20,4 +20,4 @@ export const BEERS = [
     cereal: 'hop',
     birth: '1902'
     }
-];
+];*/

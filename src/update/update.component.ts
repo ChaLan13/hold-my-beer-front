@@ -20,7 +20,7 @@ export class UpdateComponent implements OnInit {
   // private property to store all backend URLs
   private readonly _backendURL: any;
   // private property to store dialog reference
-  private _peopleDialog: MatDialogRef<DialogComponent>;
+  private _beerDialog: MatDialogRef<DialogComponent>;
 
   /**
    * Component constructor
@@ -48,14 +48,14 @@ export class UpdateComponent implements OnInit {
         flatMap((id: string) => this._fetchOne(id))
       )
       .subscribe((beer: Beer) => {
-        this._peopleDialog = this._dialog.open(DialogComponent, {
+        this._beerDialog = this._dialog.open(DialogComponent, {
           width: '500px',
           disableClose: true,
           data: beer
         });
 
         // subscribe to afterClosed observable to set dialog status and do process
-        this._peopleDialog.afterClosed()
+        this._beerDialog.afterClosed()
           .pipe(
             filter(_ => !!_),
             flatMap(_ => this._update(_))
