@@ -110,7 +110,7 @@ export class DrinksComponent implements OnInit {
   }
 
   /**
-   * Add new person and fetch all drinks to refresh the list
+   * Add new beer and fetch all drinks to refresh the list
    */
   private _add(beer: Beer): Observable<Beer[]> {
     return this._beerService

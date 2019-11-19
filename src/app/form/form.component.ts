@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {Beer} from '../app/shared/interfaces/beer';
+import {Beer} from '../shared/interfaces/beer';
 
 
 @Component({
@@ -90,10 +90,11 @@ export class FormComponent implements OnInit, OnChanges {
       this._form.patchValue(this._model);
     } else {
       this._model = {
+      id: '',
       name: '',
       country: '',
-      cereal: '', // min 1, max 10
-      birth: 0
+      cereal: [],
+      birthYear: ''
       };
       this._isUpdateMode = false;
     }

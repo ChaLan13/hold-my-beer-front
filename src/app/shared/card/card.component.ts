@@ -1,6 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Beer} from '../interfaces/beer';
 import {BeerService} from '../../services/beer.service';
+import {Router} from "@angular/router";
+import {Observable} from "rxjs";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-card',
@@ -16,7 +19,7 @@ export class CardComponent implements OnInit {
   /**
    * Component constructor
    */
-  constructor(private service: BeerService) {
+  constructor(private service: BeerService, private router: Router) {
     this._beer = {} as Beer;
   }
 
@@ -28,18 +31,11 @@ export class CardComponent implements OnInit {
   }
 
   /**
-   * Sets private property _person
+   * Sets private property _beer
    */
   @Input()
   set beer(beer: Beer) {
     this._beer = beer;
-  }
-
-  /**
-   * Returns private property _delete$
-   */
-  @Output('delete') get delete$(): EventEmitter<Beer> {
-    return this._delete$;
   }
 
   /**
@@ -49,10 +45,11 @@ export class CardComponent implements OnInit {
   }
 
   /**
-   * Function to emit event to delete current person
+   * Function to delete current beer
    */
-  delete(beer: Beer) {
-    this.service.delete(beer.id);
+  delete(beer: Beer): Observable<any> {
+    console.log('card.component envoie au service');
+    return this.service.delete(beer.id);
   }
 
 }

@@ -6,9 +6,9 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 
 import { Observable } from 'rxjs';
 import { filter, flatMap, map } from 'rxjs/operators';
-import {Beer} from '../app/shared/interfaces/beer';
-import {DialogComponent} from '../app/shared/dialog/dialog.component';
-import {environment} from '../environments/environment';
+import {Beer} from '../shared/interfaces/beer';
+import {DialogComponent} from '../shared/dialog/dialog.component';
+import {environment} from '../../environments/environment';
 
 
 @Component({
