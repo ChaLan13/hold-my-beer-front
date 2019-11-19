@@ -90,10 +90,11 @@ export class FormComponent implements OnInit, OnChanges {
       this._form.patchValue(this._model);
     } else {
       this._model = {
+        id: '',
       name: '',
       country: '',
-      cereal: '', // min 1, max 10
-      birth: 0
+      cereal: [''], // min 1, max 10
+      birthYear: '0'
       };
       this._isUpdateMode = false;
     }
