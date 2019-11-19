@@ -18,10 +18,11 @@ export class BeerService {
 
   constructor(private _http: HttpClient) {
     this._defaultBeer = {
+      id: '5dd318d76bd5eb524178105c',
       name: 'name',
       country: 'country',
-      cereal: 'cereal',
-      birth: 1900,
+      cereal: ['cereal'],
+      birthYear: '1900',
     };
     this._backendURL = {};
 

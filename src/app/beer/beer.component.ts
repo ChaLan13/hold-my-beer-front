@@ -17,6 +17,8 @@ export class BeerComponent implements OnInit {
   private _beer: any;
   private readonly _backendURL: any;
   private _isBeer: boolean;
+  private _view: string;
+
 
 
   constructor(private _beerService: BeerService, private _route: ActivatedRoute) {
@@ -31,6 +33,7 @@ export class BeerComponent implements OnInit {
 
     // build all backend urls
     Object.keys(environment.backend.endpoints).forEach(k => this._backendURL[ k ] = `${baseUrl}${environment.backend.endpoints[ k ]}`);
+    this._view = 'card';
   }
 
   /**
@@ -71,5 +74,12 @@ export class BeerComponent implements OnInit {
       .subscribe((beer: Beer) => this._beer = beer);
   }
 
+
+  /**
+   * Function to switch view
+   */
+  switchView() {
+    this._view = (this._view === 'card') ? 'list' : 'card';
+  }
 
 }

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Beer} from '../interfaces/beer';
+import {BeerService} from '../../services/beer.service';
 
 @Component({
   selector: 'app-card',
@@ -11,14 +12,12 @@ export class CardComponent implements OnInit {
   // private property to store person value
   private _beer: Beer;
   // private property to store delete$ value
-  private readonly _delete$: EventEmitter<Beer>;
 
   /**
    * Component constructor
    */
-  constructor() {
+  constructor(private service: BeerService) {
     this._beer = {} as Beer;
-    this._delete$ = new EventEmitter<Beer>();
   }
 
   /**
@@ -53,7 +52,7 @@ export class CardComponent implements OnInit {
    * Function to emit event to delete current person
    */
   delete(beer: Beer) {
-    this._delete$.emit(beer);
+    this.service.delete(beer.id);
   }
 
 }

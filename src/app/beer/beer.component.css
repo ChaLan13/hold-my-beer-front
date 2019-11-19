@@ -4,7 +4,18 @@
   height: 70px;
   width: 150px;
   position: fixed;
-  right: 0;
+  right: 70px;
+  color: blueviolet;
+  background-color: antiquewhite;
+}
+
+.switchViewButton {
+  bottom: 90px;
+  display: block;
+  height: 70px;
+  width: 150px;
+  position: fixed;
+  right: 280px;
   color: blueviolet;
   background-color: antiquewhite;
 }

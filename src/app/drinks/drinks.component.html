@@ -4,8 +4,8 @@
   </section>
 
   <section *ngSwitchCase="'list'">
-    <mat-list>
-      <mat-list-item (click)="navigate(beer)" *ngFor="let beer of drinks" class="mat-whiteframe-2dp mat-card">
+    <nb-list>
+      <nb-list-item (click)="navigate(beer)" *ngFor="let beer of drinks" class="mat-whiteframe-2dp mat-card">
 
         <h3 matLine> {{beer.name}} </h3>
         <p matLine>
@@ -14,8 +14,8 @@
           <span> {{beer.birth}} </span>
 
         </p>
-      </mat-list-item>
-    </mat-list>
+      </nb-list-item>
+    </nb-list>
   </section>
 </section>
 

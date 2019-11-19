@@ -9,8 +9,8 @@ export const environment = {
     host: '0.0.0.0',
     port: '3000',
     endpoints: {
-      allBeers: '/findAll',
-      randomBeer: '/random',
+      allBeers: '/crud-beer/findAll',
+      randomBeer: '/crud-beer/random',
       oneBeer: '/:id'
     }
   }
