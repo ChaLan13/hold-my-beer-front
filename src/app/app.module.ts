@@ -18,7 +18,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {DrinksComponent} from './drinks/drinks.component';
-import {NbButtonModule, NbThemeModule, NbLayoutModule, NbListModule} from '@nebular/theme';
+import {
+  NbButtonModule,
+  NbThemeModule,
+  NbLayoutModule,
+  NbListModule,
+  NbCardModule,
+  NbSelectModule
+} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
@@ -49,7 +56,9 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbThemeModule.forRoot({name: 'dark'}),
     NbLayoutModule,
     NbEvaIconsModule,
-    NbListModule
+    NbListModule,
+    NbCardModule,
+    NbSelectModule
 
   ],
   providers: [],

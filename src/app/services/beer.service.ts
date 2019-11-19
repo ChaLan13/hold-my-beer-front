@@ -92,6 +92,7 @@ export class BeerService {
    */
   delete(id: string): Observable<string> {
     console.log('service envoie au back');
+    console.log('id: ', id);
     return this._http.delete(this._backendURL.oneBeer.replace(':id', id))
       .pipe(
         map(_ => id)
