@@ -54,9 +54,10 @@ export class BeerService {
   }
 
   /**
-   * Function to return one random person from drinks list
+   * Function to return one random beer from drinks list
    */
   fetchRandom(): Observable<Beer> {
+    console.log('reçu de beer.component, envoi vers backend');
     return this._http.get<Beer>(this._backendURL.randomBeer)
       .pipe(
         filter(_ => !!_),
@@ -65,17 +66,17 @@ export class BeerService {
   }
 
   /**
-   * Function to return one person for current id
+   * Function to return one beer for current id
    */
   fetchOne(id: string): Observable<Beer> {
     return this._http.get<Beer>(this._backendURL.oneBeer.replace(':id', id));
   }
 
   /**
-   * Function to create a new person
+   * Function to create a new beer
    */
   create(beer: Beer): Observable<any> {
-    return this._http.post<Beer>(this._backendURL.allBeer, beer, this._options());
+    return this._http.post<Beer>(this._backendURL.allBeers, beer, this._options());
   }
 
   /**

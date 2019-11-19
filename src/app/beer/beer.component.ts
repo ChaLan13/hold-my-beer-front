@@ -65,6 +65,7 @@ export class BeerComponent implements OnInit {
   }
 
   random() {
+    console.log('beer.component.ts envoi vers beer.service');
     this._beerService
       .fetchRandom()
       .subscribe((beer: Beer) => this._beer = beer);
