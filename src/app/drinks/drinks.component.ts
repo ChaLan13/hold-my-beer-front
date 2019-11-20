@@ -81,8 +81,7 @@ export class DrinksComponent implements OnInit {
       disableClose: true
     });
 
-    // subscribe to afterClosed observable to set dialog status and do process
-    /*this._drinksDialog.afterClosed()
+    this._drinksDialog.afterClosed()
       .pipe(
         filter(_ => !!_),
         flatMap(_ => this._add(_))
@@ -91,7 +90,7 @@ export class DrinksComponent implements OnInit {
         (drinks: Beer[]) => this._drinks = drinks,
         _ => this._dialogStatus = 'inactive',
         () => this._dialogStatus = 'inactive'
-      );*/
+      );
   }
 
   /**
