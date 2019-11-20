@@ -1,30 +1,24 @@
-<mat-toolbar class="extend-toolbar">
-  <span>
-    <a [routerLink]="['/']">
-    </a>
-  </span>
+<section [ngSwitch]="view">
 
-  <span class="flex"></span>
+  <div align="center">
+  <section *ngSwitchCase="'oneBeer'" >
+    <button nbButton class="mybutton button2">
+      <i class="material-icons" (click)="switchView()">All beers</i>
+    </button>  </section>
 
-  <span>
-    <a [routerLink]="['/drinks']">List</a>
-  </span>
-</mat-toolbar>
+  <section *ngSwitchCase="'beerList'" >
+    <button nbButton class="mybutton button2" >
+      <i class="material-icons" (click)="switchView()">One Beer</i>
+    </button>  </section>
+  </div>
 
-<!-- Insert footer here
+</section>
 
-    <a class="btn info" [routerLink]="['/']">
-      <app-beer></app-beer>
-    </a>
-
-
-  </nb-layout-column>
-
-  <nb-layout-footer fixed>
-
-  </nb-layout-footer>
-
-</nb-layout-column>
-=======
- -->
-<router-outlet></router-outlet>
+<section [ngSwitch]="view">
+  <section *ngSwitchCase="'oneBeer'">
+    <app-beer></app-beer>
+  </section>
+  <section *ngSwitchCase="'beerList'">
+    <app-drinks></app-drinks>
+  </section>
+</section>

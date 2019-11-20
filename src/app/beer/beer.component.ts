@@ -55,25 +55,6 @@ export class BeerComponent implements OnInit {
       .subscribe((beer: any) => this._beer = beer);
   }
 
-  get isBeer(): boolean {
-    return this._isBeer;
-  }
-
-  set isBeer(value: boolean) {
-    this._isBeer = value;
-  }
-
-  /**
-   * Function to switch view
-   */
-  switchView() {
-    this._view = (this._view === 'oneBeer') ? 'beerList' : 'oneBeer';
-  }
-
-  get view(): string {
-    return this._view;
-  }
-
   get beer(): any {
     return this._beer;
   }

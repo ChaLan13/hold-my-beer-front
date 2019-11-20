@@ -1,32 +1,6 @@
-<section [ngSwitch]="view">
-
-  <section *ngSwitchCase="'oneBeer'">
-    <app-card [beer]="beer"></app-card>
-  </section>
-
-  <section *ngSwitchCase="'beerList'">
-    <app-drinks></app-drinks>
-  </section>
-
-
-</section>
-
 <button nbButton class="nbButton">
   <i class="material-icons" (click)="random()">Give me a random one !</i>
 </button>
 
 
-<section [ngSwitch]="view">
-
-  <section *ngSwitchCase="'oneBeer'">
-    <button nbButton class="switchViewButton">
-      <i class="material-icons" (click)="switchView()">All beers</i>
-    </button>  </section>
-
-  <section *ngSwitchCase="'beerList'">
-    <button nbButton class="switchViewButton">
-      <i class="material-icons" (click)="switchView()">One Beer</i>
-    </button>  </section>
-
-
-</section>
+<app-card [beer]="beer"></app-card>

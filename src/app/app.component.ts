@@ -10,7 +10,7 @@ import {NbMenuItem} from "@nebular/theme";
 })
 export class AppComponent implements OnInit {
 
-  private _view = 'beer';
+  private _view = 'oneBeer';
   title = 'HoldMyBeer';
   private items: NbMenuItem[];
 
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     this._matIconRegistry.addSvgIcon('icon-edit', this._domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/icon-edit.svg'));
   }
 
-  get view(){
+  get view() {
     return this._view;
   }
 
@@ -30,6 +30,6 @@ export class AppComponent implements OnInit {
    * Function to switch view
    */
   switchView() {
-    this._view = (this._view === 'drinks') ? 'beer' : 'drinks';
+    this._view = (this._view === 'oneBeer') ? 'beerList' : 'oneBeer';
   }
 }
