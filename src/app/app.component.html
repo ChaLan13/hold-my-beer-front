@@ -1,15 +1,16 @@
 <section [ngSwitch]="view">
 
   <div align="center">
-  <section *ngSwitchCase="'oneBeer'" >
-    <button nbButton class="mybutton button2">
-      <i class="material-icons" (click)="switchView()">All beers</i>
-    </button>  </section>
+    <section *ngSwitchCase="'oneBeer'" >
+      <button nbButton class="button2">
+        <i class="material-icons" (click)="switchView()">All beers</i>
+      </button>  </section>
 
-  <section *ngSwitchCase="'beerList'" >
-    <button nbButton class="mybutton button2" >
-      <i class="material-icons" (click)="switchView()">One Beer</i>
-    </button>  </section>
+    <section *ngSwitchCase="'beerList'" >
+      <button nbButton class="mybutton button2" >
+        <i class="material-icons" (click)="switchView()">One Beer</i>
+      </button>
+    </section>
   </div>
 
 </section>
