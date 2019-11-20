@@ -75,15 +75,14 @@ export class DrinksComponent implements OnInit {
    * Function to display modal
    */
   showDialog() {
-    // set dialog status
-    this._dialogStatus = 'active';
-
     // open modal
-    this._drinksDialog = this._dialog.open(DialogComponent, {width: '500px',
-      disableClose: true});
+    this._drinksDialog = this._dialog.open(DialogComponent, {
+      width: '500px',
+      disableClose: true
+    });
 
     // subscribe to afterClosed observable to set dialog status and do process
-    this._drinksDialog.afterClosed()
+    /*this._drinksDialog.afterClosed()
       .pipe(
         filter(_ => !!_),
         flatMap(_ => this._add(_))
@@ -92,7 +91,7 @@ export class DrinksComponent implements OnInit {
         (drinks: Beer[]) => this._drinks = drinks,
         _ => this._dialogStatus = 'inactive',
         () => this._dialogStatus = 'inactive'
-      );
+      );*/
   }
 
   /**

@@ -41,6 +41,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     FormComponent,
     DrinksComponent
   ],
+  entryComponents: [ DialogComponent ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

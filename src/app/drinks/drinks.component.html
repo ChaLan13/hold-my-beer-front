@@ -3,12 +3,11 @@
     <section  *ngFor="let beer of drinks">
       <app-card [beer]="beer" (deleteBeer)="delete($event)"></app-card>
     </section>
+    <button (click)="showDialog()" mat-fab color="accent" class="button-add">
+      <i class="material-icons">add</i>
+    </button>
   </section>
 
 </section>
 
-<section class="buttons-fab" *ngIf="dialogStatus === 'inactive'">
-  <button (click)="showDialog()" mat-fab color="accent" class="button-add">
-    <i class="material-icons">add</i>
-  </button>
-</section>
+
