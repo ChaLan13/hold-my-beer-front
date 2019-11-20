@@ -1,21 +1,6 @@
-.nbButton {
-  bottom: 90px;
-  display: block;
-  height: 70px;
-  width: 150px;
-  position: fixed;
-  right: 70px;
-  color: blueviolet;
-  background-color: antiquewhite;
-}
-
-.switchViewButton {
-  bottom: 90px;
-  display: block;
-  height: 70px;
-  width: 150px;
-  position: fixed;
-  right: 280px;
-  color: blueviolet;
-  background-color: antiquewhite;
+section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }

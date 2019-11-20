@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
+import {NbMenuItem} from "@nebular/theme";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
 
   private _view = 'beer';
   title = 'HoldMyBeer';
+  private items: NbMenuItem[];
 
   constructor(private _matIconRegistry: MatIconRegistry, private _domSanitizer: DomSanitizer) {
   }

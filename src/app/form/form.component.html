@@ -1,7 +1,7 @@
 <h2 mat-dialog-title *ngIf="isUpdateMode">Update {{ form.get('name').value }}</h2>
 <h2 mat-dialog-title *ngIf="!isUpdateMode">Create new beer</h2>
 
-<mat-dialog-content>
+<nb-card>
   <form novalidate [formGroup]="form">
 
     <p *ngIf="isUpdateMode">
@@ -12,21 +12,33 @@
     <table class="full-width" cellspacing="0">
       <tr>
         <td>
-          <mat-form-field class="full-width" [class.mgb15]="form.get('name').dirty && form.get('name').invalid">
-            <input matInput placeholder="Name" formControlName="name" minlength="2" required name="name" />
+          <nb-card-body class="full-width">
+            <input nbInput placeholder="Name" formControlName="name" minlength="2" required name="name" [class.mgb15]="form.get('name').dirty && form.get('name').invalid"/>
             <mat-error *ngIf="form.get('name').dirty && form.get('name').hasError('required')">
               Name is <strong>required</strong>
             </mat-error>
             <mat-error *ngIf="form.get('name').dirty && form.get('name').hasError('minlength')">
               Name is <strong>2 chars min</strong>
             </mat-error>
-          </mat-form-field>
+
+            <nb-select placeholder="Country" formControlName="country" [(selected)]="model.country">
+              <nb-option value=""> </nb-option>
+              <nb-option value="Germany">Germany</nb-option>
+              <nb-option value="Ireland">Ireland</nb-option>
+              <nb-option value="Belgium">Belgium</nb-option>
+              <nb-option value="Japan">Japan</nb-option>
+            </nb-select>
+
+            <input nbInput placeholder="Cereal" formControlName="cereal" minlength="2" [class.mgb15]="form.get('cereal').invalid"/>
+
+            <input [nbDatepicker]="model.birthYear"/>
+          </nb-card-body>
         </td>
       </tr>
     </table>
 
   </form>
-</mat-dialog-content>
+</nb-card>
 
 
 <mat-dialog-actions align="end">

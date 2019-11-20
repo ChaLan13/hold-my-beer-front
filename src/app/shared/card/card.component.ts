@@ -49,6 +49,7 @@ export class CardComponent implements OnInit {
    */
   delete(beer: Beer): Observable<any> {
     console.log('card.component envoie au service');
+    console.log('id: ', beer.id);
     return this.service.delete(beer.id);
   }
 

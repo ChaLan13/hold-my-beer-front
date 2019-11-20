@@ -6,7 +6,7 @@ import {DrinksComponent} from './drinks/drinks.component';
 
 const routes: Routes = [
   { path: '', component: DrinksComponent, pathMatch: 'full' },
-  { path: 'beer', component: BeerComponent }
+  { path: 'drinks', component: DrinksComponent }
 ];
 
 @NgModule({

@@ -77,10 +77,8 @@ export class DrinksComponent implements OnInit {
     this._dialogStatus = 'active';
 
     // open modal
-    this._drinksDialog = this._dialog.open(DialogComponent, {
-      width: '500px',
-      disableClose: true
-    });
+    this._drinksDialog = this._dialog.open(DialogComponent, {width: '500px',
+      disableClose: true});
 
     // subscribe to afterClosed observable to set dialog status and do process
     this._drinksDialog.afterClosed()

@@ -130,7 +130,7 @@ export class FormComponent implements OnInit, OnChanges {
         Validators.minLength(2)
       ])),
       birth: new FormControl('', Validators.compose([
-        Validators.minLength(2)
+        Validators.min(1)
       ])),
 
     });
