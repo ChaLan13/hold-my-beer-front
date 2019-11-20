@@ -1,22 +1,10 @@
 <section [ngSwitch]="view">
   <section *ngSwitchCase="'card'">
-    <app-card [beer]="beer" (deleteBeer)="delete($event)" *ngFor="let beer of drinks"></app-card>
+    <section  *ngFor="let beer of drinks">
+      <app-card [beer]="beer" (deleteBeer)="delete($event)"></app-card>
+    </section>
   </section>
 
-  <section *ngSwitchCase="'list'">
-    <nb-list>
-      <nb-list-item (click)="navigate(beer)" *ngFor="let beer of drinks" class="mat-whiteframe-2dp mat-card">
-
-        <h3 matLine> {{beer.name}} </h3>
-        <p matLine>
-          <span> {{beer.country}} </span>
-          <span>{{beer.cereal}} </span>
-          <span> {{beer.birthYear}} </span>
-
-        </p>
-      </nb-list-item>
-    </nb-list>
-  </section>
 </section>
 
 <section class="buttons-fab" *ngIf="dialogStatus === 'inactive'">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { Observable } from 'rxjs';
 import { filter, flatMap } from 'rxjs/operators';
@@ -64,9 +64,11 @@ export class DrinksComponent implements OnInit {
    * Function to delete one beer
    */
   delete(beer: Beer) {
+    console.log('avant' + this._drinks);
     this._beerService
       .delete(beer.id)
       .subscribe(_ => this._drinks = this._drinks.filter(__ => __.id !== _));
+    console.log('apres' + this._drinks);
   }
 
   /**
