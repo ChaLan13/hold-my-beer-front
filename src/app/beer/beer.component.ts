@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import {BEERS} from '../_static/beers';
+// import {BEERS} from '../_static/beers';
 import {merge, Observable} from 'rxjs';
 import {Beer} from '../shared/interfaces/beer';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
@@ -33,7 +33,7 @@ export class BeerComponent implements OnInit {
 
     // build all backend urls
     Object.keys(environment.backend.endpoints).forEach(k => this._backendURL[ k ] = `${baseUrl}${environment.backend.endpoints[ k ]}`);
-    this._view = 'card';
+    this._view = 'oneBeer';
   }
 
   /**
@@ -63,6 +63,17 @@ export class BeerComponent implements OnInit {
     this._isBeer = value;
   }
 
+  /**
+   * Function to switch view
+   */
+  switchView() {
+    this._view = (this._view === 'oneBeer') ? 'beerList' : 'oneBeer';
+  }
+
+  get view(): string {
+    return this._view;
+  }
+
   get beer(): any {
     return this._beer;
   }
@@ -75,11 +86,6 @@ export class BeerComponent implements OnInit {
   }
 
 
-  /**
-   * Function to switch view
-   */
-  switchView() {
-    this._view = (this._view === 'card') ? 'list' : 'card';
-  }
+
 
 }

@@ -58,7 +58,7 @@ export class BeerService {
    * Function to return one random beer from drinks list
    */
   fetchRandom(): Observable<Beer> {
-    console.log('reçu de beer.component, envoi vers backend');
+    console.log('fetch random() beer.service');
     return this._http.get<Beer>(this._backendURL.randomBeer)
       .pipe(
         filter(_ => !!_),
@@ -77,14 +77,14 @@ export class BeerService {
    * Function to create a new beer
    */
   create(beer: Beer): Observable<any> {
-    return this._http.post<Beer>(this._backendURL.allBeers, beer, this._options());
+    return this._http.post<Beer>(this._backendURL.createBeer, beer, this._options());
   }
 
   /**
    * Function to update one person
    */
   update(beer: Beer): Observable<any> {
-    return this._http.put<Beer>(this._backendURL.oneBeer.replace(':id', beer.id), beer, this._options());
+    return this._http.put<Beer>(this._backendURL.updateBeer.replace(':id', beer.id), beer, this._options());
   }
 
   /**
@@ -92,9 +92,9 @@ export class BeerService {
    */
   delete(id: string): Observable<string> {
     console.log('service envoie au back');
-    return this._http.delete(this._backendURL.oneBeer.replace(':id', id))
+    return this._http.delete(this._backendURL.deleteBeer.replace(':id', id))
       .pipe(
-        map(_ => id)
+        map(_ => id),
       );
   }
 
