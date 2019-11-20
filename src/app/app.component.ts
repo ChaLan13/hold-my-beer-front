@@ -10,6 +10,7 @@ import {NbMenuItem} from "@nebular/theme";
 })
 export class AppComponent implements OnInit {
 
+  private _intro = 'todo';
   private _view = 'oneBeer';
   title = 'HoldMyBeer';
   private items: NbMenuItem[];
@@ -31,5 +32,13 @@ export class AppComponent implements OnInit {
    */
   switchView() {
     this._view = (this._view === 'oneBeer') ? 'beerList' : 'oneBeer';
+  }
+
+  get intro() {
+    return this._intro;
+  }
+
+  introIsDone() {
+    this._intro = 'done';
   }
 }
