@@ -11,7 +11,7 @@ export const environment = {
     endpoints: {
       allBeers: '/crud-beer/findAll',
       randomBeer: '/crud-beer/random',
-      deleteBeer: '/crud-beer/delete:id',
+      deleteBeer: '/crud-beer/delete/:id',
       createBeer: '/crud-beer/create',
       updateBeer: '/crud-beer/update:id',
       oneBeer: '/:id'

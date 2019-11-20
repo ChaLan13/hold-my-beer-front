@@ -47,10 +47,10 @@ export class CardComponent implements OnInit {
   /**
    * Function to delete current beer
    */
-  delete(beer: Beer): Observable<any> {
+  delete(beer: Beer) {
     console.log('card.component envoie au service');
     console.log('id: ', beer.id);
-    return this.service.delete(beer.id);
+    this.service.delete(beer.id).subscribe(() => { console.log('cest supprime'); }, () => { console.log('ca a pas marche'); });
   }
 
 }
