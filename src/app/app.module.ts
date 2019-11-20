@@ -24,9 +24,10 @@ import {
   NbLayoutModule,
   NbListModule,
   NbCardModule,
-  NbSelectModule
+  NbSelectModule, NbDatepickerModule, NbMenuModule
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 
@@ -58,7 +59,10 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbEvaIconsModule,
     NbListModule,
     NbCardModule,
-    NbSelectModule
+    NbSelectModule,
+    NbDatepickerModule,
+    NbMenuModule,
+    MatToolbarModule
 
   ],
   providers: [],

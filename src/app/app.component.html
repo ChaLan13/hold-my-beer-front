@@ -1,19 +1,14 @@
-<nb-layout>
+<mat-toolbar class="extend-toolbar">
+  <span>
+    <a [routerLink]="['/']">
+    </a>
+  </span>
 
-  <nb-layout-header fixed>
-  <!-- Insert header here -->
-  </nb-layout-header>
+  <span class="flex"></span>
 
-  <nb-layout-column>
+  <span>
+    <a [routerLink]="['/drinks']">List</a>
+  </span>
+</mat-toolbar>
 
-    
-    
-    <app-beer></app-beer>
-    
-  </nb-layout-column>
-
-  <nb-layout-footer fixed>
-  <!-- Insert footer here -->
-  </nb-layout-footer>
-
-</nb-layout>
+<router-outlet></router-outlet>

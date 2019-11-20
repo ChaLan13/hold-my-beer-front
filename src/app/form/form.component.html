@@ -29,7 +29,9 @@
               <nb-option value="Japan">Japan</nb-option>
             </nb-select>
 
-            <input nbInput
+            <input nbInput placeholder="Cereal" formControlName="cereal" minlength="2" [class.mgb15]="form.get('cereal').invalid"/>
+
+            <input [nbDatepicker]="model.birthYear"/>
           </nb-card-body>
         </td>
       </tr>
